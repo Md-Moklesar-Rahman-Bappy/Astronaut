@@ -1,0 +1,307 @@
+<style>
+
+:root {
+  --suit-color: #E7E7E7;
+  --suit-detail-color:  #ADADAD;
+  --black: #131416;
+}
+
+body{
+  background: var(--black);
+}
+
+.box-canvas{
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  width: 300px;
+  height: 300px;
+  animation: 10s float infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: none;
+  }
+  
+  25% {
+    transform: rotate(10deg);
+  }
+  
+  75% {
+     transform: rotate(-10deg) translateY(-50px);
+  }
+  
+  100% {
+    transform: none;
+  }
+}
+
+.helmet {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 100px;
+  background: var(--suit-color);
+  border-radius: 45%;
+  border-bottom: 2px solid var(--suit-detail-color);
+}
+
+.ear {
+  position: absolute;
+  top: 80px;
+  width: 30px;
+  height: 40px;
+  background: var(--suit-detail-color);
+}
+
+.ear.left {
+  left: 75px;
+  border-radius: 50% 0 0 50%;
+}
+
+.ear.right {
+  right: 75px;
+  border-radius: 0 50% 50% 0;
+}
+
+.antenna {
+  position: absolute;
+  top: 60px;
+  left: 87px;
+  width: 3px;
+  height: 25px;
+  background: var(--suit-detail-color);
+}
+
+.antenna::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: var(--suit-detail-color);
+  border-radius: 50%;
+  top: -10px;
+  left: -6px;
+}
+
+.visor {
+  position: absolute;
+  width: 100px;
+  height: 80px;
+  background: var(--black);
+  border-radius: 45%;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.visor::after {
+  content: '';
+  position: absolute;
+  left: 60px;
+  top: 10px;
+  width: 20px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 5px 0 0 rgba(255,255,255,0.5);
+  transform: rotate(-45deg);
+}
+
+.helmet-edge {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 30px;
+  background: var(--suit-color);
+  border-radius: 0 0 40% 40%;
+  border-bottom: 2px solid var(--suit-detail-color);
+  top: 130px;
+}
+
+.body {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 140px;
+  width: 130px;
+  height: 150px;
+  background: var(--suit-color);
+  border-radius: 50% 50% 30% 30%;
+  overflow: hidden;
+}
+
+.stripe {
+  position: absolute;
+  left: -10px;
+  height: 40px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.stripe.blue {
+  top: 50px;
+  box-shadow: 0 10px 0 #47599B;
+}
+
+.stripe.red {
+  top: 65px;
+  box-shadow: 0 10px 0 #F75151;
+}
+
+.arm {
+  position: absolute;
+  background: var(--suit-color);
+  width: 90px;
+  height: 30px;
+  top: 170px;
+  border-radius: 20%
+}
+
+.arm.left {
+  transform: rotate(-30deg);
+  left: 45px;
+}
+
+.arm.right {
+  right: 45px;
+  transform: rotate(30deg);
+}
+
+.band {
+  position: absolute;
+  height: 30px;
+  width: 20px;
+  border-radius: 45%;
+}
+
+.left .band {
+  box-shadow: -5px 0 0 #47599B;
+  left: 20px;
+}
+
+.right .band {
+  box-shadow: 5px 0 0 #47599B;
+  right: 20px;
+}
+
+.arm::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 22px;
+  background: var(--suit-detail-color);
+}
+
+.arm.left::before {
+  left: -20px;
+  border-radius: 50% 0 0 50%;
+}
+
+.arm.right::before {
+  right: -20px;
+  border-radius: 0 50% 50% 0;
+}
+
+.arm::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--suit-detail-color);
+  border-radius: 50%;
+ 
+}
+
+.arm.left::after {
+   left: -10px;
+}
+
+.arm.right::after {
+   right: -10px;
+}
+
+.leg {
+  position: absolute;
+  top: 270px;
+  width: 70px;
+  height: 50px;
+  border-radius: 0 0 40% 40%;
+  overflow: hidden;
+}
+
+.leg.left {
+  left: 90px;
+  transform: rotate(10deg);
+}
+
+.leg.right {
+  right: 90px;
+  transform: rotate(-10deg);
+}
+
+.leg::before {
+  content: '';
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  
+  border-top: 90px solid var(--suit-color);
+}
+
+.shoe {
+  position: absolute;
+  background: var(--suit-detail-color);
+  height: 20px;
+  width: 36px;
+  border-radius: 50% 50% 0 0 ;
+  top: 310px;
+}
+
+.shoe.left {
+  transform: rotate(10deg);
+  left: 102px;
+}
+
+.shoe.right {
+  right: 102px;
+  transform: rotate(-10deg);
+}
+
+</style>
+
+<body>
+  <div class="box-canvas">
+    <div class="leg left"></div>
+    <div class="leg right"></div>
+    <div class="shoe left"></div>
+    <div class="shoe right"></div>
+    <div class="arm left">
+      <div class="band"></div>
+    </div>
+    <div class="arm right">
+      <div class="band"></div>
+    </div>
+    <div class="body">
+      <div class="stripe blue"></div>
+      <div class="stripe red"></div>
+    </div>
+    <div class="ear left"></div>
+    <div class="ear right"></div>
+    <div class="antenna"></div>
+    <div class="helmet-edge"></div>
+    <div class="helmet">
+      <div class="visor"></div>
+    </div>
+  </div>
+</body>
